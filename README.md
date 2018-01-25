@@ -12,3 +12,10 @@ This is a basic example of using Quadratic Programming (QP) or Non-negative Matr
 
 (2) external reference panel for all tissues. It is a matrix of feature (row) by tissue (column).
 
+In the main program:
+
+"build.QP" will use QP to estimate tissue proportions. It requires inputs of (1) methylation level for all samples and (2) tissue reference panel. 
+
+"build.NMF" will NMF to estimate both tissue reference panel and tissue proportions. It requires inputs of (1) methylation level for all samples and (2) matrix rank in deconvolution. 
+
+Additionally, if user wants to evaluate the prediction accuracy, "build.model.svm.1cv" will conduct leave-one-out cross-validation (LOOCV) using Support Vector Machine (SVM). 
